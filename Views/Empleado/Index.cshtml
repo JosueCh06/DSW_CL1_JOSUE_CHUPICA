@@ -1,0 +1,81 @@
+﻿@model IEnumerable<DSW_CL1_JOSUE_CHUPICA.Entity.Empleado>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>LISTA DE EMPLEADOS</h2>
+
+<p>
+    @Html.ActionLink("Agregar Empleado", "Create",null, new { @class = "btn btn-success"})
+</p>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            APELLIDOS
+        </th>
+        <th>
+            NOMBRES
+        </th>
+        <th>
+            FECHA DE NACIMIENTO
+        </th>
+        <th>
+            DIRECCION
+        </th>
+        <th>
+            DISTRITO
+        </th>
+        <th>
+            CELULAR
+        </th>
+        <th>
+            CARGO
+        </th>
+        <th>
+            FECHA DE CONTRATO
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apeEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FecNac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dirEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idDistrito)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.celEmpleado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fecContrato)
+        </td>
+        <td>
+            @Html.ActionLink("Actualizar", "Edit", new { id = item.idEmpleado}) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.idEmpleado }) |
+            @Html.ActionLink("Dar de baja", "Delete", new { id = item.idEmpleado })
+        </td>
+    </tr>
+}
+
+</table>

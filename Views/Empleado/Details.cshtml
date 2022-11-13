@@ -1,0 +1,90 @@
+﻿@model DSW_CL1_JOSUE_CHUPICA.Entity.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>INFORMACIÓN DEL EMPLEADO: @Model.nombEmpleado @Model.apeEmpleado</h2>
+
+<div>
+    <h4>Empleado(a)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apeEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apeEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecNac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecNac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dirEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dirEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idDistrito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDistrito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.celEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.celEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecContrato)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idEmpleado}) |
+    @Html.ActionLink("Retornar a la lista", "Index")
+</p>

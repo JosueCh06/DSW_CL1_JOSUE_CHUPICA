@@ -1,0 +1,96 @@
+﻿@model DSW_CL1_JOSUE_CHUPICA.Entity.Empleado
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>DAR DE BAJA AL EMPLEADO: @Model.apeEmpleado @Model.nombEmpleado</h2>
+
+<h3>¿Seguro de dar de baja al empleado?</h3>
+<div>
+    <h4>Empleado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apeEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apeEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FecNac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FecNac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dirEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dirEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idDistrito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDistrito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.celEmpleado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.celEmpleado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecContrato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecContrato)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Dar de baja" class="btn btn-danger" /> |
+            @Html.ActionLink("Regresar a la lista", "Index")
+        </div>
+    }
+</div>
